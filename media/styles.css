@@ -1,0 +1,179 @@
+html {
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+  color: #0a0a0a;
+  font-family: 'Lato', sans-serif;
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+    color: #05668d;
+    text-decoration: none;
+} 
+
+a:hover {
+  color: #058c6f;
+}
+
+ul {
+  list-style: none;
+  margin: 20px;
+}
+
+li {
+  margin: 10px;
+}
+
+.text-highlight1 {
+ color: #12a1c9;
+}
+
+.text-highlight2 {
+  color: #b112c9;
+}
+
+.text-highlight3 {
+  color: #c9ba12;
+}
+
+
+.welcome,.intro,.resume,.links,.quote,.error {
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.welcome *,.intro *,.resume *,.links *,.quote * {
+  max-width: 1000px;
+  text-align: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.welcome {
+  background: #f7f7f7 url('1-mobile.jpg') no-repeat top center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  height: 100vh;
+  min-height: 100vh;
+  text-align: center;
+  -webkit-text-shadow: 0px 0px 35px #f7f7f7;
+  -moz-text-shadow:    0px 0px 35px #f7f7f7;
+  text-shadow:         0px 0px 35px #f7f7f7;
+}
+.welcome h1 {
+  font-size: 3em
+}
+
+.intro {
+  background-color: #0a0a0a;
+  color: #f7f7f7;
+  min-height: 50vh;
+}
+.intro svg {
+  margin: 20px;
+}
+.intro p {
+  line-height: 1.5em;
+}
+
+.resume {
+  background-color: #0a0a0a;
+  color: #f7f7f7;
+  min-height: 50vh;
+}
+.resume ul {
+  justify-content: center;
+}
+
+.links {
+  min-height: 50vh;
+}
+.links ul {
+  font-size: 1.25em;
+}
+
+.quote {
+  background: 
+    linear-gradient(
+      rgba(10, 10, 10, 0.7), 
+      rgba(10, 10, 10, 0.7)
+    ),
+    url('2-mobile.jpg') no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  color: #f7f7f7;
+  font-family: 'Lora', serif;
+  font-size: 1.25em;
+  height: 66vh;
+  min-height: 66vh;
+}
+
+.error {
+  background-image: url('3-mobile.jpg');
+  background-size: cover;
+  -webkit-background-size: cover;
+  color: #0a0a0a;
+  font-size: 2em;
+  height: 100vh;
+  min-height: 100vh;
+  text-align: center;
+  -webkit-text-shadow: 0px 0px 35px #f7f7f7;
+  -moz-text-shadow:    0px 0px 35px #f7f7f7;
+  text-shadow:         0px 0px 35px #f7f7f7;
+}
+
+/* mobile font changes */
+@media only screen and (min-width: 768px) {
+
+  .welcome h1 {
+    font-size: 4em;
+  }
+  .quote {
+    font-size: 1.5em;
+  }
+}
+/* dont fix bkg for mobile */
+/* use full size backgrounds */
+@media only screen and (min-device-width: 1025px) {
+
+  .welcome {
+    background-image: url('1-desktop.jpg')
+  }
+
+  .quote {
+    background: 
+    linear-gradient(
+      rgba(10, 10, 10, 0.7), 
+      rgba(10, 10, 10, 0.7)
+    ),
+    url('2-desktop.jpg') no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+  }
+
+  .welcome, .quote {
+    background-attachment: fixed;
+  }
+
+  .error {
+    background-image: url('3-desktop.jpg')
+  }
+}
+
+i {
+  margin-right: .3em;
+}
